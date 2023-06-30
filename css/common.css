@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+
+:root{
+    --title-01: 60px;
+    --title-02: 40px;
+    --title-03: 30px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img{
+    display: block;
+}
+
+.button{
+    width: 250px;
+    height: 64px;
+    line-height: 64px;
+    display: inline-block;
+    background-color: #000;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+.button.round{
+    border-radius: 64px;
+}
+/* .button.lined{} */
+
+body{
+    background-color: white;
+    color: #111;
+    font-style: 16px;
+    line-height: 1.5;
+    font-family: 'Noto Sns KR','sans-serif','Apple SD Gothic Neo';
+    font-weight: 400;
+}
+
+.header{
+    height: 150px;
+    padding: 0 20px;
+    max-width: 1320px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border-bottom: 1px solid #333; */
+    z-index: 10;
+    background-color: #fff;
+}
+
+.bars{
+    display: none;
+}
+
+.bars img{
+    width: 38px;
+    display: block;
+}
+
+.close{
+    display: none;
+}
+
+.logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logo img{
+    width: 130px;
+    display: block;
+}
+
+.gnb ul{
+    display: flex;
+    gap: 50px;
+}
+
+.gnb ul li a{
+    display: block;
+    padding: 20px 0;
+    font-weight: 500;
+}
+.top_menu{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+.top_menu img{
+    width: 28px;
+    display: block;
+}
+
+.footer{
+    padding: 100px 80px 56px;
+    background-color: #111;
+    color: #fff;
+    height: 410px;
+}
+
+.f_menu{
+    display: flex;
+    margin-bottom: 120px;
+}
+
+.f_menu .f_gnb{
+    flex: 1;
+}
+
+.f_gnb{
+    display: flex;
+}
+
+.f_gnb> li{
+    width: 218px;
+}
+
+.f_gnb> li>a{
+    font-size: 14px;
+  font-weight: 700;
+  display: block;
+  padding: 10px 0;
+}
+
+.f_gnb ul li a{
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+}
+
+.f_menu .sns{
+    width: 200px;
+}
+
+.f_menu .sns .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.sns p{
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.sns .icons img{
+    width: 38px;
+    display: block;
+}
+
+.copyright{
+    font-size: 10px;
+    color: #999;
+}
+
+@media (max-width: 768px){
+    .button.round {
+        width: 140px;
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        font-weight: 400;
+      }
+
+    .header {
+        height: 80px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+    
+      .logo img {
+        width: 90px;
+      }
+    
+      .gnb {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        z-index: 1;
+        padding-top: 100px;
+        transition: left 0.3s;
+      }
+    
+      .gnb.active {
+        left: 0;
+      }
+    
+      .gnb ul {
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+      }
+    
+      .gnb ul li a {
+        font-size: 28px;
+        padding: 26px 0;
+      }
+    
+      .top_menu {
+        gap: 20px;
+      }
+    
+      .top_menu img {
+        width: 20px;
+      }
+    
+      .bars {
+        display: block;
+      }
+    
+      .close {
+        position: fixed;
+        top: 30px;
+        right: 30px;
+      }
+    
+      .close img {
+        width: 24px;
+      }
+    
+    .footer{
+        padding: 100px 30px 56px;
+        height: 645px;
+    }
+    
+    .f_menu{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 60px;
+        gap: 60px;
+    }
+    
+    .f_menu .f_gnb{
+        flex: initial;
+    }
+    
+    .f_gnb{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+    .f_gnb> li{
+        width: initial;
+        margin-bottom: 40px;
+    }
+    
+    .f_gnb ul li a{
+      font-weight: 400;
+      font-size: 13px;
+      padding: 8px 0;
+    }
+
+    .f_menu .sns{
+        width: 200px;
+    }
+        
+    .sns .icons img{
+        width: 44px;
+    }
+    
+    .main{
+        overflow: hidden;
+        margin-top: 80px;
+    }
+}
